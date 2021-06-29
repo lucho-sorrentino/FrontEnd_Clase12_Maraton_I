@@ -1,38 +1,162 @@
-// ########## MARATON 01 ##########
-// ********** Ejercicio 01 **********
-// Pedir nombre al usuario y saludarlo. Pasar el texto a Mayúsculas y a Minúsculas. Mostrar ambos en pantalla.
+                        // ########## MARATON 01 ##########
 
+                        // ********** Ejercicio 01 **********
+// Pedir nombre al usuario y saludarlo. Pasar el texto a Mayúsculas y a Minúsculas. Mostrar ambos en pantalla.
+// let nombre = prompt("¿Cómo te llamás?");
+// alert("Hola " + nombre + "!" );
+// alert(nombre.toUpperCase());
+// alert(nombre.toLowerCase());
 
 
 
 // ********** Ejercicio 02 **********
 //  Pedir al usuario dos números y mostrar la suma y resta de ellos. Para la resta, restar siempre al más grande el más chico.
-
+// let numA = parseInt(prompt("Ingrese un número:"));
+// let numB = parseInt(prompt("Ingrese otro número:"));
+// alert("La suma de ambos números es: " + (numA + numB));
+// let saver;
+// if (numA > numB) {
+//     saver = numA;
+//     alert("La resta entre el primer número y el segundo es: " + (saver - numB));
+// } else {
+//     alert("La resta entre el segundo número y el primero es: " + (numB - numA));
+// }
 
 
 
 
 // ********** Ejercicio 03 **********
 // Ingresar un texto. Preguntar si quiere ver el resultado en pantalla (alert) o consola (console.log). Pasar el texto a MAYUSCULA y mostrar donde corresponda.
+// let texto = prompt("Ingrese un texto:");
+// let choice = parseInt(prompt("¿Dónde desea ver el texto? Opción '1': por consola u Opción '2': en pantalla."));
+// if (choice === 1) {
+//     console.log(texto.toUpperCase());
+// } else if (choice === 2) {
+//     alert(texto.toUpperCase());
+// } else {
+//     alert("La opción ingresada no es válida");
+// }
+
 
 
 
 
 // ********** Ejercicio 04 **********
 //  Calculadora. Pedir ingresar dos números. Luego ingresar una operación (SUMA/RESTA/MULTI/DIV/POTENCIA). Realizar la operación y mostrar el resultado en pantalla.
-
-
+// let numA = parseInt(prompt("Ingrese un número:"));
+// let numB = parseInt(prompt("Ingrese otro número:"));
+// let operacion = parseInt(prompt("Ingrese la operación que desea ejecutar entre esos los números. Puede elegir entre:" + "\n" + "1. SUMA" + "\n" + "2. RESTA" + "\n" + "3. MULTIPLICACION" + "\n" + "4. DIVISION" + "\n" + "5. POTENCIA")); 
+// switch(operacion) {
+//     case 1:
+//         alert("El resultado es: " + (numA + numB));
+//         break;
+//     case 2:
+//         alert("El resultado es: " + (numA - numB));
+//         break;
+//     case 3:
+//         alert("El resultado es: " + (numA * numB));
+//         break;
+//     case 4:
+//         alert("El resultado es: " + (numA / numB));
+//         break;
+//     case 5:
+//         let saver = 1;
+//         for (i=0; i<numB; i++) {
+//             saver = saver * numA;                       
+//         }
+//         alert(saver);
+//         break;
+//     default: 
+//         alert("El dato ingresado no es válido");
+//         break;
+// }
 
 
 // ********** Ejercicio 05 **********
 //  Vamos reutilizar la calculadora del punto 5. Pero esta vez, luego de mostrar el resultado, vamos a preguntar al usuario si desea hacer otra operación o terminar. Si quiere seguir operando, volvemos a pedir valores, operación y mostrar resultado HASTA que nos diga que no quiere continuar.
 // Extra: investigar/googlear la función de Javascript "confirm"
 
+// let numA = parseInt(prompt("Ingrese un número:"));
+// let numB = parseInt(prompt("Ingrese otro número:"));
+// let operacion = parseInt(prompt("Ingrese la operación que desea ejecutar entre esos los números. Puede elegir entre:" + "\n" + "1. SUMA" + "\n" + "2. RESTA" + "\n" + "3. MULTIPLICACION" + "\n" + "4. DIVISION" + "\n" + "5. POTENCIA")); 
+// switch(operacion) {
+//     case 1:
+//         alert("El resultado es: " + (numA + numB));
+//         break;
+//     case 2:
+//         alert("El resultado es: " + (numA - numB));
+//         break;
+//     case 3:
+//         alert("El resultado es: " + (numA * numB));
+//         break;
+//     case 4:
+//         alert("El resultado es: " + (numA / numB));
+//         break;
+//     case 5:
+//         let saver = 1;
+//         for (i=0; i<numB; i++) {
+//             saver = saver * numA;                       
+//         }
+//         alert(saver);
+//         break;
+//     default: 
+//         alert("El dato ingresado no es válido");
+//         break;
+// }
 
+// let consulta = confirm("Desea hacer otra/s operación/es?");
+// while (consulta) {
+//     numA = parseInt(prompt("Ingrese un número:"));
+//     numB = parseInt(prompt("Ingrese otro número:"));
+//     operacion = parseInt(prompt("Ingrese la operación que desea ejecutar entre esos los números. Puede elegir   entre:" + "\n" + "1. SUMA" + "\n" + "2. RESTA" + "\n" + "3. MULTIPLICACION" + "\n" + "4. DIVISION" + "\n" + "5.   POTENCIA")); 
+//     switch(operacion) {
+//         case 1:
+//             alert("El resultado es: " + (numA + numB));
+//             break;
+//         case 2:
+//             alert("El resultado es: " + (numA - numB));
+//             break;
+//         case 3:
+//             alert("El resultado es: " + (numA * numB));
+//             break;
+//         case 4:
+//             alert("El resultado es: " + (numA / numB));
+//             break;
+//         case 5:
+//             let saver = 1;
+//             for (i=0; i<numB; i++) {
+//                 saver = saver * numA;                       
+//             }
+//             alert(saver);
+//             break;
+//         default: 
+//             alert("El dato ingresado no es válido");
+//             break;
+//     }
+//     consulta = confirm("Desea hacer otra/s operación/es?");
+// }
+
+// @@@@@@@@@@ PARA REVEER CUANDO MANEJE FUNCIONES!!! @@@@@@@@@@
 
 
 // ********** Ejercicio 06 **********
 //  Agregar alumnos/as a un curso. Vamos a pedirle al usuario que ingrese nombres de alumnos/as para el nuevo curso. Continuar guardando nombres HASTA que el usuario ingrese SALIR. Mostrar todos los nombres en pantalla. 
+
+// let lista = [];
+// let flag = true;
+// let nombre = "";
+// while (flag) { 
+//     nombre = prompt("Ingrese el nombre de el/la alumno/a para agregarlo/a a la lista." + "\n" + "Presione 'SALIR' para finalizar.");
+//     if (nombre !== "SALIR") {
+//         lista.push(nombre);
+//     } else {
+//         flag = false;
+//     }    
+// }
+// alert("Los alumnos y alumnas son: " + lista);
+
+
+
 
 
 // ********** Ejercicio 07 **********

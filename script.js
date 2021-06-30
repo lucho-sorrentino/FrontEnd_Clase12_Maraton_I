@@ -162,7 +162,19 @@
 // ********** Ejercicio 07 **********
 //  Dado el siguiente array de nombres, recorrerlo y mostrar en pantalla: Indice (posición) y Nombre con la primera letra en mayúscula.
 
-// const ej7Nombres = ["goku","mario","melchor","mafalda","cacho","hermione","tony","pappo","leia",”homero”];
+// const ej7Nombres = ["goku","mario","melchor","mafalda","cacho","hermione","tony","pappo","leia","homero"];
+// for (i=0; i<ej7Nombres.length; i++) {
+//     let nombre = ej7Nombres[i];    
+//     let longitud = nombre.length;    
+//     let prim = nombre.charAt(0);    
+//     let aMay = prim.toUpperCase();    
+//     let final = nombre.replace(prim, aMay);    
+//     alert("Posición: " + i + "\n" + "Nombre: " + final);
+// }
+
+//También puedo plantear la última variable de esta manera:
+//      let final = aMay + nombre.slice(1,longitud);
+
 
 
 
@@ -173,7 +185,27 @@
 // - Si tiene menos o es igual a 3 caracteres, informar: "Nombre corto"
 // - Si es igual a "Fido" o "Gertrudis", informar: "Hay que vacunar contra la rabia"
 // - Si es igual a "Tuerca", informar: "Entregar alimento balanceado"
+
 // const ej8Mascotas = ["Tuerca","Ramshanaram","Perro","Gertrudis","Kat","Fido","Lo","Loko","MAX"];
+// let nombre = "";
+// let longitud;
+// for (i=0; i<ej8Mascotas.length; i++) {    
+//     nombre = ej8Mascotas[i];
+//     longitud = nombre.length;
+//     console.log(longitud);
+//     if (longitud>6 && nombre === "Gertrudis") {
+//         alert(nombre + ": " + "nombre largo" + "\n" + "Hay que vacunar contra la rabia");
+//     }
+//     else if (longitud>6) {
+//         alert(nombre + ": " + "nombre largo");
+//     } else if (longitud<=3) {
+//         alert(nombre + ": " + "nombre corto");
+//     } else if (nombre === "Fido") {
+//         alert(nombre  + ": " + "Hay que vacunar contra la rabia");
+//     } else if (nombre === "Tuerca") {
+//         alert(nombre  + ": " + "Entregar alimento balanceado");
+//     } 
+// }
 
 
 

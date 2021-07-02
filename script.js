@@ -76,40 +76,14 @@
 //  Vamos reutilizar la calculadora del punto 5. Pero esta vez, luego de mostrar el resultado, vamos a preguntar al usuario si desea hacer otra operación o terminar. Si quiere seguir operando, volvemos a pedir valores, operación y mostrar resultado HASTA que nos diga que no quiere continuar.
 // Extra: investigar/googlear la función de Javascript "confirm"
 
-// let numA = parseInt(prompt("Ingrese un número:"));
-// let numB = parseInt(prompt("Ingrese otro número:"));
-// let operacion = parseInt(prompt("Ingrese la operación que desea ejecutar entre esos los números. Puede elegir entre:" + "\n" + "1. SUMA" + "\n" + "2. RESTA" + "\n" + "3. MULTIPLICACION" + "\n" + "4. DIVISION" + "\n" + "5. POTENCIA")); 
-// switch(operacion) {
-//     case 1:
-//         alert("El resultado es: " + (numA + numB));
-//         break;
-//     case 2:
-//         alert("El resultado es: " + (numA - numB));
-//         break;
-//     case 3:
-//         alert("El resultado es: " + (numA * numB));
-//         break;
-//     case 4:
-//         alert("El resultado es: " + (numA / numB));
-//         break;
-//     case 5:
-//         let saver = 1;
-//         for (i=0; i<numB; i++) {
-//             saver = saver * numA;                       
-//         }
-//         alert(saver);
-//         break;
-//     default: 
-//         alert("El dato ingresado no es válido");
-//         break;
-// }
-
-// let consulta = confirm("Desea hacer otra/s operación/es?");
+// let consulta = true;
+// let numA = 0;
+// let numB = 0;
 // while (consulta) {
 //     numA = parseInt(prompt("Ingrese un número:"));
 //     numB = parseInt(prompt("Ingrese otro número:"));
-//     operacion = parseInt(prompt("Ingrese la operación que desea ejecutar entre esos los números. Puede elegir   entre:" + "\n" + "1. SUMA" + "\n" + "2. RESTA" + "\n" + "3. MULTIPLICACION" + "\n" + "4. DIVISION" + "\n" + "5.   POTENCIA")); 
-//     switch(operacion) {
+//     let operacion = parseInt(prompt("Ingrese la operación que desea ejecutar entre esos números. Puede elegir entre:" + "\n" + "1. SUMA" + "\n" + "2. RESTA" + "\n" + "3. MULTIPLICACION" + "\n" + "4. DIVISION" + "\n" + "5. POTENCIA")); 
+//         switch(operacion) {
 //         case 1:
 //             alert("El resultado es: " + (numA + numB));
 //             break;
@@ -127,7 +101,7 @@
 //             for (i=0; i<numB; i++) {
 //                 saver = saver * numA;                       
 //             }
-//             alert(saver);
+//             alert("El resultado es: " + saver);
 //             break;
 //         default: 
 //             alert("El dato ingresado no es válido");
@@ -135,8 +109,6 @@
 //     }
 //     consulta = confirm("Desea hacer otra/s operación/es?");
 // }
-
-// @@@@@@@@@@ PARA REVEER CUANDO MANEJE FUNCIONES!!! @@@@@@@@@@
 
 
 // ********** Ejercicio 06 **********
@@ -154,7 +126,6 @@
 //     }    
 // }
 // alert("Los alumnos y alumnas son: " + lista);
-
 
 
 
@@ -216,7 +187,41 @@
 // - Cada menor de edad pagará el menú $450 y cada adulto, $700. 
 // - Si el grupo tiene más de 4 adultos, se hará un 10% al total de la factura. 
 // Mostrar por pantalla la cantidad de comensales y el costo total a pagar. 
+
 // const ej9restaurant = [25,17,18,44,12,9,36,50]
+// const menuAdulto = 700;
+// const menuMenor = 450;
+// let costoTotalAdultos = 0;
+// let costoTotalMenores = 0;
+// let contadorAdultos = [];
+// for (let i = 0; i < ej9restaurant.length; i++) {
+//     let valorMenu = 0;    
+//     if (ej9restaurant[i] >= 18) {        
+//         valorMenu = menuAdulto
+//         console.log(valorMenu);
+//         costoTotalAdultos = costoTotalAdultos + valorMenu;        
+//         contadorAdultos.push(ej9restaurant[i]);
+//         console.log(contadorAdultos);
+//     } else if (ej9restaurant[i] < 18) {
+//         valorMenu = menuMenor;
+//         console.log(valorMenu);
+//         costoTotalMenores = costoTotalMenores + valorMenu;
+//     }    
+// }
+// let costoTotalFactura = costoTotalAdultos + costoTotalMenores;
+// console.log(costoTotalFactura);
+
+// let precioConDescuento = 0;
+// if (contadorAdultos.length > 4) {
+//     console.log(contadorAdultos);    
+//     precioConDescuento = costoTotalFactura - (costoTotalFactura * 10 / 100);
+//     alert("La cantidad de comensales es: " + ej9restaurant.length + ". Son " + contadorAdultos.length + " adultos y el total a pagar son $" + precioConDescuento + ".");
+// } else if (contadorAdultos <= 4) {
+//     precioConDescuento = costoTotalFactura;
+//     alert("La cantidad de comensales es: " + ej9restaurant.length + ". Son " + contadorAdultos.length + " adultos y el total a pagar son $" + precioConDescuento + ".");
+// }
+
+
 
 
 

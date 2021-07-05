@@ -1,6 +1,6 @@
-                        // ########## MARATON 01 ##########
+// ########## MARATON 01 ##########
 
-                        // ********** Ejercicio 01 **********
+// ********** Ejercicio 01 **********
 // Pedir nombre al usuario y saludarlo. Pasar el texto a Mayúsculas y a Minúsculas. Mostrar ambos en pantalla.
 // let nombre = prompt("¿Cómo te llamás?");
 // alert("Hola " + nombre + "!" );
@@ -236,14 +236,15 @@
 //   - Si el código ingresado esta entre 501 y 999, es un paciente nuevo.
 //     - Preguntarles "Desea pasarse a VIP?". Si la respuesta es afirmativa, guardar el código de paciente.
 //     - Agregar el código de paciente al final de la cola (array) de turnos
-    
+
 //   - Si todos los pacientes fueron ingresados, informar en pantalla:
 //     - Calidad del servicio VIP. Informar valor promedio, valor máximo y valor mínimo.
 //     - Ingreso al consultorio: Mostrar en pantalla el orden de ingreso x código de paciente.
 //     - Pasarse a VIP: Mostrar en pantalla todos los códigos de pacientes que desean ser VIP
-  
+
 //   - Nota: Escribir código con funciones para facilitar su lectura.
-                //======= ALGORITMO ======
+
+// ======= ALGORITMO ======
 // Pedir código de paciente (3 dígitos de 1 a 999):
 //                     Si está entre 1 y 99 (paciente VIP):
 //                         -Agregar código de paciente al principio del array de turnos.
@@ -253,7 +254,7 @@
 //                     Si está entre 501 y 999 (paciente Nuevo):
 //                         -Agregar código de paciente al final del array de turnos.
 //                         -Preguntar si desea pasar a VIP y guardar el código de paciente (nuevo array?).
-                    
+
 // Mostrar en pantalla:
 //                     -Calidad servicio VIP: promedio y valores máximo y mínimo.
 //                     -Orden de ingreso a los consultorios por código de paciente.
@@ -265,82 +266,84 @@ let calidadAtencion = [];
 let candidatosVIP = [];
 let continuar = true;
 
-// ============== FUNCION PRINCIPAL ==============
-function tipoPaciente (ordenAtencion) {
+// let turnos2 = [];
+// turnos2 = tipoPaciente();
+
+//      ============== FUNCION PRINCIPAL ==============
+
+function tipoPaciente() {
     while (continuar) {
         let codigoPaciente = parseInt(prompt("¿Cuál es su código de paciente?"));
         if (codigoPaciente > 0 && codigoPaciente < 100) {
-            ordenAtencion.unshift(codigoPaciente);
+            turnos.unshift(codigoPaciente);
             guardarPuntajeAtencion(calidadAtencion);
-            console.log(turnos);
-            console.log(calidadAtencion);
-    
+            // console.log(turnos);
+            // console.log(calidadAtencion);
+
         } else if (codigoPaciente >= 100 && codigoPaciente <= 500) {
-            ordenAtencion.push(codigoPaciente);
-            console.log(turnos);
-    
+            turnos.push(codigoPaciente);
+            // console.log(turnos);
+
         } else if (codigoPaciente >= 501 && codigoPaciente <= 999) {
-            ordenAtencion.push(codigoPaciente);
-            interesadosVIP(codigoPaciente, candidatosVIP);
-            console.log(turnos);
-            console.log(candidatosVIP);
+            turnos.push(codigoPaciente);
+            interesadosVIP(codigoPaciente, candidatosVIP);            
         }
         continuar = confirm("¿Desea cargar otro turno?");
-    }    
+    }
 }
 
 // ============== FUNCION PARA GUARDAR PUNTAJES CALIDAD ATENCION ==============
-function guardarPuntajeAtencion (arregloCalidad) {
+function guardarPuntajeAtencion() {
     let puntuacionAtencion = parseInt(prompt("Usando una puntuación de 1 a 10, ¿cómo calificaría nuestra atención?"));
-    arregloCalidad.push(puntuacionAtencion);
+    calidadAtencion.push(puntuacionAtencion);
 }
 
 //  ========== FUNCIONES PARA CALCULAR CALIDAD DE ATENCION ==========
-function promedio(arregloCalidad) {
+function promedio() {
     let sumaCalidadAtencion = 0;
     let promedioAtencion = 0;
-    for (let i = 0; i < arregloCalidad.length; i++) {
-        console.log(arregloCalidad.length);
-        console.log(arregloCalidad[i]);
-        sumaCalidadAtencion = sumaCalidadAtencion + arregloCalidad[i];
-        console.log(sumaCalidadAtencion);
-        }
-    promedioAtencion = sumaCalidadAtencion / arregloCalidad.length;
-    return promedioAtencion;    
-} 
+    for (let i = 0; i < calidadAtencion.length; i++) {
+        // console.log(calidadAtencion.length);
+        // console.log(calidadAtencion[i]);
+        sumaCalidadAtencion = sumaCalidadAtencion + calidadAtencion[i];
+        // console.log(sumaCalidadAtencion);
+    }
+    promedioAtencion = sumaCalidadAtencion / calidadAtencion.length;
+    return promedioAtencion;
+}
 
-function mejor(arregloCalidad) { 
-    let maximoAtencion = 0;    
-    for (let i = 0; i < arregloCalidad.length; i++) {        
-        if (arregloCalidad[i] > maximoAtencion) {            
-            maximoAtencion = arregloCalidad[i];            
-        }        
+function mejor() {
+    let maximoAtencion = 0;
+    for (let i = 0; i < calidadAtencion.length; i++) {
+        if (calidadAtencion[i] > maximoAtencion) {
+            maximoAtencion = calidadAtencion[i];
+        }
     }
     return maximoAtencion;
 }
 
-function peor(arregloCalidad) {    
+function peor() {
     let minimoAtencion = 10;
-    for (let i = 0; i < arregloCalidad.length; i++) {        
-        if (arregloCalidad[i] < minimoAtencion) {
-            minimoAtencion = arregloCalidad[i];
-        }                
+    for (let i = 0; i < calidadAtencion.length; i++) {
+        if (calidadAtencion[i] < minimoAtencion) {
+            minimoAtencion = calidadAtencion[i];
+        }
     }
     return minimoAtencion;
 }
 
 // ========== FUNCION PARA GUARDAR PACIENTES INTERESADOS EN SER VIPs ==========
-function interesadosVIP (code, listaVIP) {
+function interesadosVIP(code) {
     let consultaVIP = parseInt(prompt("¿Le gustaría cambiar al plan VIP? Seleccionar 1. = 'Sí' o 2. = 'No': "));
     if (consultaVIP === 1) {
-        listaVIP.push(code);
+        candidatosVIP.push(code);
     }
 }
 
-tipoPaciente(turnos);     
-        
+tipoPaciente();
+
 alert("Los turnos fueron asignados según el código de paciente de la siguiente manera: " + turnos);
 
-alert("Los parámetros de calidad de atención son: \nPromedio: " + promedio(calidadAtencion) + "\nValor máximo: " + mejor(calidadAtencion) + "\nValor mínimo: " + peor(calidadAtencion));
+alert("Los parámetros de calidad de atención son: \nPromedio: " + promedio() + "\nValor máximo: " + mejor() + "\nValor mínimo: " + peor());
 
 alert("Los pacientes interesados en cambiar al plan VIP son los siguientes: " + candidatosVIP);

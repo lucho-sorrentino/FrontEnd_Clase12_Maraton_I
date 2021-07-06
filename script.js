@@ -14,10 +14,8 @@
 // let numA = parseInt(prompt("Ingrese un número:"));
 // let numB = parseInt(prompt("Ingrese otro número:"));
 // alert("La suma de ambos números es: " + (numA + numB));
-// let saver;
-// if (numA > numB) {
-//     saver = numA;
-//     alert("La resta entre el primer número y el segundo es: " + (saver - numB));
+// if (numA > numB) {    
+//     alert("La resta entre el primer número y el segundo es: " + (numA - numB));
 // } else {
 //     alert("La resta entre el segundo número y el primero es: " + (numB - numA));
 // }
@@ -94,7 +92,7 @@
 //             alert("El resultado es: " + (numA * numB));
 //             break;
 //         case 4:
-//             alert("El resultado es: " + (numA / numB));
+//             alert("El resultado es: " + (numA / numB));  -->Agregar una validación para saber si un número es 0
 //             break;
 //         case 5:
 //             let saver = 1;
@@ -127,6 +125,18 @@
 // }
 // alert("Los alumnos y alumnas son: " + lista);
 
+// === REVISAR ESTA OPCION ===
+
+// let lista = [];
+// let nombre;
+// while (nombre !== "SALIR") {
+//     nombre = prompt("Ingrese el nombre de el/la alumno/a para agregarlo/a a la lista." + "\n" + "Presione 'SALIR' para finalizar.");    
+//     lista.push(nombre);
+//     console.log(nombre); 
+//     console.log(lista)   ;
+// }
+// lista.pop();
+// alert("Los alumnos y alumnas son: " + lista);    
 
 
 
@@ -213,7 +223,7 @@
 // let precioConDescuento = 0;
 // if (contadorAdultos.length > 4) {
 //     console.log(contadorAdultos);    
-//     precioConDescuento = costoTotalFactura - (costoTotalFactura * 10 / 100);
+//     precioConDescuento = costoTotalFactura - (costoTotalFactura * 0.9);
 //     alert("La cantidad de comensales es: " + ej9restaurant.length + ". Son " + contadorAdultos.length + " adultos y el total a pagar son $" + precioConDescuento + ".");
 // } else if (contadorAdultos <= 4) {
 //     precioConDescuento = costoTotalFactura;
@@ -261,89 +271,89 @@
 //                     -Códigos de los pacientes que desean pasar a VIP.
 
 
-let turnos = [];
-let calidadAtencion = [];
-let candidatosVIP = [];
-let continuar = true;
+// let turnos = [];
+// let calidadAtencion = [];
+// let candidatosVIP = [];
+// let continuar = true;
 
 // let turnos2 = [];
 // turnos2 = tipoPaciente();
 
 //      ============== FUNCION PRINCIPAL ==============
 
-function tipoPaciente() {
-    while (continuar) {
-        let codigoPaciente = parseInt(prompt("¿Cuál es su código de paciente?"));
-        if (codigoPaciente > 0 && codigoPaciente < 100) {
-            turnos.unshift(codigoPaciente);
-            guardarPuntajeAtencion(calidadAtencion);
-            // console.log(turnos);
-            // console.log(calidadAtencion);
+// function tipoPaciente() {
+//     while (continuar) {
+//         let codigoPaciente = parseInt(prompt("¿Cuál es su código de paciente?"));
+//         if (codigoPaciente > 0 && codigoPaciente < 100) {
+//             turnos.unshift(codigoPaciente);
+//             guardarPuntajeAtencion(calidadAtencion);
+//             // console.log(turnos);
+//             // console.log(calidadAtencion);
 
-        } else if (codigoPaciente >= 100 && codigoPaciente <= 500) {
-            turnos.push(codigoPaciente);
-            // console.log(turnos);
+//         } else if (codigoPaciente >= 100 && codigoPaciente <= 500) {
+//             turnos.push(codigoPaciente);
+//             // console.log(turnos);
 
-        } else if (codigoPaciente >= 501 && codigoPaciente <= 999) {
-            turnos.push(codigoPaciente);
-            interesadosVIP(codigoPaciente, candidatosVIP);            
-        }
-        continuar = confirm("¿Desea cargar otro turno?");
-    }
-}
+//         } else if (codigoPaciente >= 501 && codigoPaciente <= 999) {
+//             turnos.push(codigoPaciente);
+//             interesadosVIP(codigoPaciente, candidatosVIP);            
+//         }
+//         continuar = confirm("¿Desea cargar otro turno?");
+//     }
+// }
 
 // ============== FUNCION PARA GUARDAR PUNTAJES CALIDAD ATENCION ==============
-function guardarPuntajeAtencion() {
-    let puntuacionAtencion = parseInt(prompt("Usando una puntuación de 1 a 10, ¿cómo calificaría nuestra atención?"));
-    calidadAtencion.push(puntuacionAtencion);
-}
+// function guardarPuntajeAtencion() {
+//     let puntuacionAtencion = parseInt(prompt("Usando una puntuación de 1 a 10, ¿cómo calificaría nuestra atención?"));
+//     calidadAtencion.push(puntuacionAtencion);
+// }
 
 //  ========== FUNCIONES PARA CALCULAR CALIDAD DE ATENCION ==========
-function promedio() {
-    let sumaCalidadAtencion = 0;
-    let promedioAtencion = 0;
-    for (let i = 0; i < calidadAtencion.length; i++) {
-        // console.log(calidadAtencion.length);
-        // console.log(calidadAtencion[i]);
-        sumaCalidadAtencion = sumaCalidadAtencion + calidadAtencion[i];
-        // console.log(sumaCalidadAtencion);
-    }
-    promedioAtencion = sumaCalidadAtencion / calidadAtencion.length;
-    return promedioAtencion;
-}
+// function promedio() {
+//     let sumaCalidadAtencion = 0;
+//     let promedioAtencion = 0;
+//     for (let i = 0; i < calidadAtencion.length; i++) {
+//         // console.log(calidadAtencion.length);
+//         // console.log(calidadAtencion[i]);
+//         sumaCalidadAtencion = sumaCalidadAtencion + calidadAtencion[i];
+//         // console.log(sumaCalidadAtencion);
+//     }
+//     promedioAtencion = sumaCalidadAtencion / calidadAtencion.length;
+//     return promedioAtencion;
+// }
 
-function mejor() {
-    let maximoAtencion = 0;
-    for (let i = 0; i < calidadAtencion.length; i++) {
-        if (calidadAtencion[i] > maximoAtencion) {
-            maximoAtencion = calidadAtencion[i];
-        }
-    }
-    return maximoAtencion;
-}
+// function mejor() {
+//     let maximoAtencion = 0;
+//     for (let i = 0; i < calidadAtencion.length; i++) {
+//         if (calidadAtencion[i] > maximoAtencion) {
+//             maximoAtencion = calidadAtencion[i];
+//         }
+//     }
+//     return maximoAtencion;
+// }
 
-function peor() {
-    let minimoAtencion = 10;
-    for (let i = 0; i < calidadAtencion.length; i++) {
-        if (calidadAtencion[i] < minimoAtencion) {
-            minimoAtencion = calidadAtencion[i];
-        }
-    }
-    return minimoAtencion;
-}
+// function peor() {
+//     let minimoAtencion = 10;
+//     for (let i = 0; i < calidadAtencion.length; i++) {
+//         if (calidadAtencion[i] < minimoAtencion) {
+//             minimoAtencion = calidadAtencion[i];
+//         }
+//     }
+//     return minimoAtencion;
+// }
 
 // ========== FUNCION PARA GUARDAR PACIENTES INTERESADOS EN SER VIPs ==========
-function interesadosVIP(code) {
-    let consultaVIP = parseInt(prompt("¿Le gustaría cambiar al plan VIP? Seleccionar 1. = 'Sí' o 2. = 'No': "));
-    if (consultaVIP === 1) {
-        candidatosVIP.push(code);
-    }
-}
+// function interesadosVIP(code) {
+//     let consultaVIP = parseInt(prompt("¿Le gustaría cambiar al plan VIP? Seleccionar 1. = 'Sí' o 2. = 'No': "));
+//     if (consultaVIP === 1) {
+//         candidatosVIP.push(code);
+//     }
+// }
 
-tipoPaciente();
+// tipoPaciente();
 
-alert("Los turnos fueron asignados según el código de paciente de la siguiente manera: " + turnos);
+// alert("Los turnos fueron asignados según el código de paciente de la siguiente manera: " + turnos);
 
-alert("Los parámetros de calidad de atención son: \nPromedio: " + promedio() + "\nValor máximo: " + mejor() + "\nValor mínimo: " + peor());
+// alert("Los parámetros de calidad de atención son: \nPromedio: " + promedio() + "\nValor máximo: " + mejor() + "\nValor mínimo: " + peor());
 
-alert("Los pacientes interesados en cambiar al plan VIP son los siguientes: " + candidatosVIP);
+// alert("Los pacientes interesados en cambiar al plan VIP son los siguientes: " + candidatosVIP);

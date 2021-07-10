@@ -125,15 +125,13 @@
 // }
 // alert("Los alumnos y alumnas son: " + lista);
 
-// === REVISAR ESTA OPCION ===
+//      === REVISAR ESTA OPCION ===
 
 // let lista = [];
 // let nombre;
 // while (nombre !== "SALIR") {
 //     nombre = prompt("Ingrese el nombre de el/la alumno/a para agregarlo/a a la lista." + "\n" + "Presione 'SALIR' para finalizar.");    
-//     lista.push(nombre);
-//     console.log(nombre); 
-//     console.log(lista)   ;
+//     lista.push(nombre);     
 // }
 // lista.pop();
 // alert("Los alumnos y alumnas son: " + lista);    
@@ -302,13 +300,13 @@
 //     }
 // }
 
-// ============== FUNCION PARA GUARDAR PUNTAJES CALIDAD ATENCION ==============
+//     ============== FUNCION PARA GUARDAR PUNTAJES CALIDAD ATENCION ==============
 // function guardarPuntajeAtencion() {
 //     let puntuacionAtencion = parseInt(prompt("Usando una puntuación de 1 a 10, ¿cómo calificaría nuestra atención?"));
 //     calidadAtencion.push(puntuacionAtencion);
 // }
 
-//  ========== FUNCIONES PARA CALCULAR CALIDAD DE ATENCION ==========
+//     ========== FUNCIONES PARA CALCULAR CALIDAD DE ATENCION ==========
 // function promedio() {
 //     let sumaCalidadAtencion = 0;
 //     let promedioAtencion = 0;
@@ -342,7 +340,7 @@
 //     return minimoAtencion;
 // }
 
-// ========== FUNCION PARA GUARDAR PACIENTES INTERESADOS EN SER VIPs ==========
+//     ========== FUNCION PARA GUARDAR PACIENTES INTERESADOS EN SER VIPs ==========
 // function interesadosVIP(code) {
 //     let consultaVIP = parseInt(prompt("¿Le gustaría cambiar al plan VIP? Seleccionar 1. = 'Sí' o 2. = 'No': "));
 //     if (consultaVIP === 1) {
